@@ -104,3 +104,11 @@ InitTestScene*.unity*
 
 # Auto-generated cache in Assets folder
 /[Aa]ssets/[Ss]ceneDependencyCache*
+
+# --- Hack Club / WakaTime ---
+.wakatime-project
+.wakatime/*
+
+# --- Editor configs ---
+.vscode/
+*.slnx
