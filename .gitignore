@@ -112,3 +112,6 @@ InitTestScene*.unity*
 # --- Editor configs ---
 .vscode/
 *.slnx
+
+# --- MacOS temp files ---
+.DS_Store
