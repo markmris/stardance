@@ -9,15 +9,16 @@ public class PlayerController : MonoBehaviour
     [SerializeField] InputActionReference moveAction;
     [SerializeField] InputActionReference lookAction;
     [SerializeField] InputActionReference sprintAction;
-    [SerializeField] float walkSpeed;
-    [SerializeField] float sprintSpeed;
+    [SerializeField] InputActionReference crouchAction;
     [SerializeField] float mouseSensitivity;
 
-    float stamina = 100f;
-
+    private float walkSpeed = 5f;
+    private float sprintSpeed = 9.5f;
+    private float stamina = 100f;
     private Vector2 moveDirection;
     private Vector2 lookDirection;
     private bool sprinting;
+    private bool crouching;
 
     private float pitch = 0f;
 
@@ -32,6 +33,7 @@ public class PlayerController : MonoBehaviour
         moveDirection = moveAction.action.ReadValue<Vector2>();
         lookDirection = lookAction.action.ReadValue<Vector2>();
         sprinting = sprintAction.action.IsPressed();
+        crouching = crouchAction.action.IsPressed();
 
         stamina += sprinting && moveDirection != Vector2.zero ? -Time.deltaTime * 10 : Time.deltaTime * 10;
         stamina = Mathf.Clamp(stamina, 0f, 100f);

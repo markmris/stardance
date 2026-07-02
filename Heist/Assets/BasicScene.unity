@@ -445,8 +445,7 @@ MonoBehaviour:
   moveAction: {fileID: 8340068452787742668, guid: c66dd314dd4618f4b840f7b661de152d, type: 3}
   lookAction: {fileID: -796647075061685301, guid: c66dd314dd4618f4b840f7b661de152d, type: 3}
   sprintAction: {fileID: -8270608077013039378, guid: c66dd314dd4618f4b840f7b661de152d, type: 3}
-  walkSpeed: 5
-  sprintSpeed: 9.5
+  crouchAction: {fileID: -8951068107820055212, guid: c66dd314dd4618f4b840f7b661de152d, type: 3}
   mouseSensitivity: 0.5
 --- !u!54 &1861879269
 Rigidbody:
